@@ -1,0 +1,20 @@
+{
+    "builders": [
+        {
+            "type": "qemu",
+            "iso_url": "http://cloud-images.ubuntu.com/releases/bionic/release/ubuntu-18.04-server-cloudimg-amd64.img",
+            "iso_checksum": "sha256:f136639410c31008a49c57ea8963923773d0cafe2834c7e59a8dacd326c640f3",
+            "disk_image": true,
+            "disk_size": 5120,
+            "disk_interface": "virtio-scsi",
+            "disk_discard": "unmap",
+            "ssh_username": "packer",
+            "ssh_password": "packerpassword",
+            "http_directory": "cloud-data",
+            "qemuargs": [
+                ["-smbios", "type=1,serial=ds=nocloud-net;instance-id=packer;seedfrom=http://{{ .HTTPIP }}:{{ .HTTPPort }}/"]
+            ],
+            "use_default_display": true
+        }
+    ]
+}
