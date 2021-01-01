@@ -29,4 +29,4 @@ jobs:
         uses: hashicorp-contrib/setup-packer@v1
         
       - name: Validate template
-        run: make validate-ubuntu
+        run: make build-ubuntu
