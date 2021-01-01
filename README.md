@@ -1,3 +1,3 @@
-[![Actions Status](https://github.com/azenakhi/packer-builder/workflows/CI/badge.svg)](https://github.com/azenakhi/packer-builder/actions)
+![example workflow file path](https://github.com/azenakhi/packer-builder/workflows/.github/workflows/main.yml/badge.svg)
 
 # Packer Builder
