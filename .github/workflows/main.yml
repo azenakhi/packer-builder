@@ -28,5 +28,7 @@ jobs:
       - name: Use latest Packer
         uses: hashicorp-contrib/setup-packer@v1
         
-      - name: Validate template
+      - name: Build Packer template
+        env:
+          DO_TOKEN: ${{ secrets.DO_TOKEN }}
         run: make build-ubuntu
