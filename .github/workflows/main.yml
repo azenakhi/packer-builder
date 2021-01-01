@@ -24,13 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-    steps:
-    - uses: hashicorp/setup-terraform@v1
-      with:
-        terraform_version: 0.14.3
-    - name: CD terraform folder
-      uses: ./terraform
-    - name: Terraform init
-      run: terraform init
-    - name: Terraform plan
-      run: terraform plan
+      - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.14.3
+      - name: CD terraform folder
+        uses: ./terraform
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform plan
+        run: terraform plan
